@@ -11,7 +11,7 @@
 
 이외의 코드는 쉬운 계단 수 문제와 똑같다.
 
-```
+```c++
 int stair_number(int input, int length, int mask) {
     if(length == n && mask == 1023) return 1;
     if(length == n && mask != 1023) return 0;
