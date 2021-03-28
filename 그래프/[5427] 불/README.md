@@ -10,7 +10,9 @@
 상근이가 테두리에 도달하면 탈출에 성공한 것이기 때문에 (현재까지 걸린 시간 + 1)을 출력한다.
 
 ```c++
+while (1) {
         //불 번지기
+        int fire_size = (int)fire.size();
         for (int i = 0; i < fire_size; i++) {
             for (int j = 0; j < 4; j++) {
                 int nr = fire.front().first + dr[j], nc = fire.front().second + dc[j];
@@ -36,6 +38,8 @@
             movement.pop();
         }
         if (movement.size() == 0) return 0;//더이상 움질일 곳이 없음
+        res++;
+    }
 ```
 ## 📝Review
 문제 자체는 빨리 풀었지만, 메모리 초과 때문에 애먹었다. 상근이 움직인 후 갔던 곳으로는 다시 가면 안되는데, 이걸 처리를 안해줘서 메모리 초과가 났다. 바보같다.
